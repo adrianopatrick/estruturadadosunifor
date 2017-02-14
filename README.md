@@ -53,11 +53,42 @@ Projeto da disciplina de Estrutura de Dados do curso de Análise e Desenvolvimen
       <td>20/02</td>
       <td>Recursividade (Fibonacci)</td>
     </tr>
-     <tr>
+    <tr>
       <td>22/02</td>
       <td>Recursividade(Fatorial)</td>
       <td>    </td>
       <td></td>
       <td></td>
+    </tr>
+    <tr>
+      <td colspan=5>Março</td>
+    </tr>
+    <tr>
+      <td>06/03</td>
+      <td>Árvore de Recursão (Busca Binária)</td>
+      <td>    </td>
+      <td>08/02</td>
+      <td>Árvore de Recursão (Merge Sort)</td>
+    </tr>
+    <tr>
+      <td>13/03</td>
+      <td>Lista Estática (lista sequencial)</td>
+      <td>    </td>
+      <td>15/02</td>
+      <td>Lista Estática (lista sequencial)</td>
+    </tr>
+    <tr>
+      <td>20/03</td>
+      <td>Lista Estática (lista sequencial)</td>
+      <td>    </td>
+      <td>22/02</td>
+      <td>Fila e Pilha estática</td>
+    </tr>
+    <tr>
+      <td>27/03</td>
+      <td>Exercícios</td>
+      <td>    </td>
+      <td>29/03</td>
+      <td>NP1</td>
     </tr>
  </table>
