@@ -17,13 +17,13 @@ public class InsertionSort {
 		}
 	}
 	
-	public static void sort(Object[] objs, Comparator<Object> comparator){
+
+	public static void sorting(Object[] objs, Comparator<Object> comparator){
 		for(int j = 1; j < objs.length; j++){
 			Object key = objs[j];
-			
 			Integer i = j - 1;
 			
-			while(i >= 0 && comparator.compare(key, objs[i]) < 0){
+			while (i >= 0 && comparator.compare(key, objs[i]) < 0) {
 				objs[i + 1] = objs[i];
 				i--;
 			}

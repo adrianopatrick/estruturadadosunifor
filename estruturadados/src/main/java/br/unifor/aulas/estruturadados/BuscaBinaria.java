@@ -4,9 +4,11 @@ import java.util.Comparator;
 
 public class BuscaBinaria {
 
+	/**
+	 * Complexidade: O(lg n)
+	 * */
 	public static Integer busca(Integer[] numbers, Integer valor) {
-
-		if (valor != null) {
+		if(valor != null) {
 			Integer inicio = 0;
 			Integer fim = numbers.length - 1;
 
@@ -40,7 +42,7 @@ public class BuscaBinaria {
 
 	public static Integer buscar(Object[] objs, Object valor, boolean isOrdered, Comparator<Object> comparator) {
 		if (!isOrdered) {
-			InsertionSort.sort(objs, comparator);
+			InsertionSort.sorting(objs, comparator);
 		}
 
 		return buscar(objs, valor, 0, objs.length - 1, comparator);
