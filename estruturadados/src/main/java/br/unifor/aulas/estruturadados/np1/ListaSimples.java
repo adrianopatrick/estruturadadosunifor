@@ -1,4 +1,4 @@
-package br.unifor.aulas.estruturadados;
+package br.unifor.aulas.estruturadados.np1;
 
 public class ListaSimples<E> implements Lista<E> {
 
@@ -75,12 +75,6 @@ public class ListaSimples<E> implements Lista<E> {
 	private void verificaEspaco() {
 		if (this.index == elementos.length) {
 			throw new StackOverflowError("Não há mais espaço na lista");
-		}
-	}
-
-	private void validaIndex(int index) {
-		if (index < 0 || index > this.size()) {
-			throw new ArrayIndexOutOfBoundsException("Índice fora do intervalo permitido.");
 		}
 	}
 

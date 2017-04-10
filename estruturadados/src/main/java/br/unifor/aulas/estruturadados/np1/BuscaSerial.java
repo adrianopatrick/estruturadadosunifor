@@ -1,4 +1,4 @@
-package br.unifor.aulas.estruturadados;
+package br.unifor.aulas.estruturadados.np1;
 
 public class BuscaSerial {
 

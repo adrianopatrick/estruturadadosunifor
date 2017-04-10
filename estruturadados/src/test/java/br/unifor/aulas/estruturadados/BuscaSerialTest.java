@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import br.unifor.aulas.estruturadados.np1.BuscaSerial;
+
 public class BuscaSerialTest {
 
 	@Test

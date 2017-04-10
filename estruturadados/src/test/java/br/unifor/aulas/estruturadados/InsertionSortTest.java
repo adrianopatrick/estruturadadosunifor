@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import br.unifor.aulas.estruturadados.np1.InsertionSort;
+
 public class InsertionSortTest {
 
 	@Test

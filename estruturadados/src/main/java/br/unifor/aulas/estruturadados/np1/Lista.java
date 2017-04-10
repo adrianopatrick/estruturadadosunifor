@@ -1,4 +1,4 @@
-package br.unifor.aulas.estruturadados;
+package br.unifor.aulas.estruturadados.np1;
 
 public interface Lista<E> {
 
@@ -37,4 +37,10 @@ public interface Lista<E> {
 	Object remove(int i);
 	
 	boolean remove(E e);
+	
+	default void validaIndex(int index) {
+		if (index < 0 || index >= this.size()) {
+			throw new ArrayIndexOutOfBoundsException("Índice fora do intervalo permitido.");
+		}
+	}
 }
