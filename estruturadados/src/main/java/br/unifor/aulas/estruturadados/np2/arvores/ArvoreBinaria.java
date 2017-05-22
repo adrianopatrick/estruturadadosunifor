@@ -19,13 +19,13 @@ public class ArvoreBinaria<T> {
 		if(isEmpty()) {
 			this.raiz = new No<>(valor);
 		} else {
-			if(insereADireita(no, valor)) { 
+			if(valorMaior(no, valor)) { 
 				if(no.direito == null) {
 					no.direito = new No<T>(valor);
 				} else {
 					inserir(no.direito, valor);
 				}
-			} else if(insereAEsquerda(no, valor)) {
+			} else if(valorMenor(no, valor)) {
 				if(no.esquerdo == null) {
 					no.esquerdo = new No<T>(valor);
 				} else {
@@ -34,12 +34,51 @@ public class ArvoreBinaria<T> {
 			}
 		}
 	}
+	
+	public void remover(Object valor) throws Exception {
+		if(isEmpty()) {
+			throw new Exception("Estrutura vazia.");
+		}
+		remover(raiz, valor);
+	}
+	
+	public void remover(No<T> no, Object valor) {
+		if(valorMaior(no, valor)) {
+			remover(no.direito, valor);
+		} else if(valorMenor(no, valor)) {
+			remover(no.esquerdo, valor);
+		} else {
+			if(no.direito != null) {
+				no.valor = getMin(no.direito);
+				remover(no.direito, no.valor);
+			} else if(no.esquerdo != null) {
+				no.valor = getMax(no.esquerdo);
+				remover(no.esquerdo, no.valor);
+			} else {
+				no = null;
+			}
+		}
+	}
 
-	private boolean insereAEsquerda(No<T> no, Object valor) {
+	private Object getMax(No<T> esquerdo) {
+		if(raiz.direito != null) {
+			getMax(raiz.direito);
+		}
+		return raiz;
+	}
+
+	private Object getMin(No<T> raiz) {
+		if(raiz.esquerdo != null) {
+			getMin(raiz.esquerdo);
+		} 
+		return raiz;
+	}
+
+	private boolean valorMenor(No<T> no, Object valor) {
 		return comparator.compare(valor, no.valor) < 0;
 	}
 
-	private boolean insereADireita(No<T> no, Object valor) {
+	private boolean valorMaior(No<T> no, Object valor) {
 		return comparator.compare(valor, no.valor) > 0;
 	}
 
